@@ -1,0 +1,155 @@
+.party-list-wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	overflow-y: auto;
+	background: #595757;
+}
+
+.party-list-wrap .list-main{
+	width: 696px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.list-main li{
+	position: relative;
+	width: 696px;
+	height: 186px;
+	background: url('../../img/10/list-unit-bg.png') no-repeat center center;
+	background-size: cover;
+	margin-bottom: 10px;
+}
+
+.list-main li .lm-cover{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	left: 25px;
+	top: 38px;
+	border: 5px solid #FFF;
+}
+
+.list-main li .lm-title{
+	position: absolute;
+	font-size: 40px;
+	color: #727171;
+	left: 170px;
+	top: 70px;
+	width: 275px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.list-main li .lm-date{
+	position: absolute;
+	font-size: 25px;
+	color: #9fa0a0;
+	right: 120px;
+	top: 80px;
+	width: 125px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+/*detail*/
+
+.party-detail-wrap{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	overflow-y: auto;
+	background: #f7f8f8;
+}
+
+.party-detail-wrap .user-block{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	text-align: center;
+}
+
+.party-detail-wrap .user-block .ub-cover{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	border: 6px solid #FFF;
+	margin-top: 50px;
+}
+
+.party-detail-wrap .user-block .ub-name{
+	width: 100%;
+	font-size: 36px;
+	color: #595757;
+	margin-top: 25px;
+}
+
+.party-detail-wrap .user-list li{
+	width: 320px;
+	height: 290px;
+	border: 6px solid #efefef;
+	border-radius: 24px;
+	background: #eac632;
+	text-align: center;
+	line-height: 290px;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+.party-detail-wrap .user-list li.cur{
+	background: #FFF;
+	border: 6px solid #eac632;
+}
+
+.party-detail-wrap .user-list li .ub-cover{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 6px solid #FFF;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.party-detail-wrap .user-list li:nth-child(2n+1){
+	float: left;
+	margin-left: 30px;
+}
+
+.party-detail-wrap .user-list li:nth-child(2n){
+	float: right;
+	margin-right: 30px;
+}
+
+.party-detail-wrap .ctrl-block{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	left: 0px;
+	bottom: 0px;
+	background: #3e3a39;
+}
+
+.party-detail-wrap .ctrl-block:after{
+	position: absolute;
+	content: '我要发言';
+	font-size: 36px;
+	color: #FFF;
+	width: 400px;
+	text-align: center;
+	left: 50%;
+	margin-left: -200px;
+	height: 100px;
+	line-height: 100px;
+	top: 0px;
+}
+
+.party-detail-wrap .ctrl-block.taped:after,.party-detail-wrap .ctrl-block:active{
+	content: '松开 发送语音';
+}
