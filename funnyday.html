@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no"> 
+	<meta http-equiv="Content-Type">
+	<meta content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=750px, user-scalable=no">
+	<title>一元闹翻天</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css?v=2" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css?v=2" />
+	<link rel="stylesheet" type="text/css" href="./css/10/funnyday.css?v=2" />
+	<link rel="stylesheet" type="text/css" href="./css/swiper.min.css?v=2" />
+</head>
+<body>
+<div class="main-wrap funnyday">
+	<!-- Swiper -->
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><img src="./img/slider_eg.png" /></li>
+            <li class="swiper-slide"><img src="./img/slider_eg.png" /></li>
+            <li class="swiper-slide"><img src="./img/slider_eg.png" /></li>
+            <li class="swiper-slide"><img src="./img/slider_eg.png" /></li>
+            <li class="swiper-slide"><img src="./img/slider_eg.png" /></li>
+        </ul>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+
+    <div class="cover-txt-wrap">
+    	<div class="ctw-left">
+    		<div class="period-num1">期号：30482</div>
+    		<div class="period-num2">596.04</div>
+    		<div class="period-txt">本期累计积分</div>
+    	</div>
+		<div class="ctw-right">
+			<div class="cr-title">揭晓倒计时</div>
+			<div class="ct-time-wrap">
+				<div class="min dib">
+					<p class="t">48</p>
+					<p class="b">Minutes</p>
+				</div>
+				<div class="sec dib">
+					<p class="t">56</p>
+					<p class="b">Seconds</p>
+				</div>
+			</div>
+			<a class="cr-bt" href="javascript:;">查看计算详情</a>
+		</div>
+    </div>
+
+    <!-- ctrl-wrap -->
+    <ul class="ctrl-wrap">
+    	<li class="hasarrow"><span class="tt">图文详情</span><span class="tf">(建议在wifi下查看)</span></li>
+    	<li class="hasarrow"><span class="tt">往期揭晓</span><img class="ti" src="./img/10/icon_eg.png" /><span class="tt">获奖积分：￥304.1</span></li>
+    	<li>所有参与记录</li>
+    </ul>
+    <!-- ctrl-wrap end -->
+    <ul class="history-list">
+    	<li>
+    		<div class="hl-title">NU553M</div>
+    		<div class="hl-txt">参与了 <span class="times">1</span> 人次 <span class="date">2016-09-18  21:50:12</span></div>
+    		<img class="hl-cover" src="./img/10/icon_eg.png" />
+    	</li>
+    	<li>
+    		<div class="hl-title">NU553M</div>
+    		<div class="hl-txt">参与了 <span class="times">1</span> 人次 <span class="date">2016-09-18  21:50:12</span></div>
+    		<img class="hl-cover" src="./img/10/icon_eg.png" />
+    	</li>
+    	<li>
+    		<div class="hl-title">NU553M</div>
+    		<div class="hl-txt">参与了 <span class="times">1</span> 人次 <span class="date">2016-09-18  21:50:12</span></div>
+    		<img class="hl-cover" src="./img/10/icon_eg.png" />
+    	</li>
+    	<li>
+    		<div class="hl-title">NU553M</div>
+    		<div class="hl-txt">参与了 <span class="times">1</span> 人次 <span class="date">2016-09-18  21:50:12</span></div>
+    		<img class="hl-cover" src="./img/10/icon_eg.png" />
+    	</li>
+    </ul>
+
+    <!-- bt-wrap -->
+	<a class="join-now" href="javascript:;">立即参与</a>
+    <!-- bt-wrap end -->
+
+</div>
+
+<script type="text/javascript" src= "./js/zepto.min.js"></script>
+<script type="text/javascript" src= "./js/swiper-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+	adaptscreen(750);
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+})
+function adaptscreen(widthnum){
+	var DEFAULT_WIDTH = widthnum, // 页面的默认宽度
+	ua = navigator.userAgent.toLowerCase(), // 根据 user agent 的信息获取浏览器信息
+	deviceWidth = window.screen.width, // 设备的宽度
+	devicePixelRatio = window.devicePixelRatio || 1, // 物理像素和设备独立像素的比例，默认为1
+	targetDensitydpi;    // Android4.0以下手机不支持viewport的width，需要设置target-densitydpi
+	if (ua.indexOf("android") !== -1 && parseFloat(ua.slice(ua.indexOf("android")+8)) < 4) {
+	targetDensitydpi = DEFAULT_WIDTH / deviceWidth * devicePixelRatio * 160;
+	$('meta[name="viewport"]').attr('content', 'target-densitydpi=' + targetDensitydpi + ', width=device-width, user-scalable=no');
+	}else{
+		$('meta[name="viewport"]').attr('content', 'target-densitydpi=device-dpi, width='+DEFAULT_WIDTH+'px, user-scalable=no');
+	}
+}
+</script>
+</body>
+</html>
