@@ -39,11 +39,11 @@
 			<div class="cr-title">揭晓倒计时</div>
 			<div class="ct-time-wrap">
 				<div class="min dib">
-					<p class="t">48</p>
+					<p class="t js-min-block">--</p>
 					<p class="b">Minutes</p>
 				</div>
 				<div class="sec dib">
-					<p class="t">56</p>
+					<p class="t js-sec-block">--</p>
 					<p class="b">Seconds</p>
 				</div>
 			</div>
@@ -85,11 +85,50 @@
 	<a class="join-now" href="javascript:;">立即参与</a>
     <!-- bt-wrap end -->
 
+
+    <!-- 金币积分弹窗 -->
+    <div class="gold-window">
+    	<div class="gw-mark"></div>
+    	<div class="gw-main">
+    		<div class="gwm-line"><span class="gw-title">积分：</span><span class="gw-content">1</span></div>
+    		<div class="gwm-line"><span class="gw-title">金币：</span><span class="gw-content">3</span></div>
+    		
+    	</div>
+    </div>
+    <!-- 金币积分弹窗end -->
+
 </div>
 
 <script type="text/javascript" src= "./js/zepto.min.js"></script>
 <script type="text/javascript" src= "./js/swiper-3.3.1.min.js"></script>
 <script type="text/javascript">
+var restsecond = 605;  /*剩余秒数*/
+var curDate = new Date();
+var timer={};
+function daojishi(){
+	timer = setInterval(function(){
+		var tmpDate = new Date();
+		var restNow = parseInt((restsecond * 1000  - (tmpDate - curDate))/1000);
+		var restMin = parseInt(restNow / 60);
+		var restLast = restNow % 60
+		if(restNow < 0){
+			/*倒计时结束*/
+			restNow = 0;
+			clearInterval(timer);
+		}
+		//console.log(restMin , restNow);
+		$('.js-min-block').eq(0).html(rspad(restMin+'')[0] + rspad(restMin+'')[1]);
+		$('.js-sec-block').eq(0).html(rspad(restLast+'')[0] + rspad(restLast+'')[1]);
+	},1000)
+}
+
+function rspad(str){
+	while(str.length < 2){
+		str = '0' + str;
+	}
+	return str;
+}
+
 
 
 $(function(){
@@ -98,6 +137,8 @@ $(function(){
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
+
+    daojishi();
 })
 function adaptscreen(widthnum){
 	var DEFAULT_WIDTH = widthnum, // 页面的默认宽度
