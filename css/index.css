@@ -1,0 +1,370 @@
+body{
+	width:100%;
+}
+
+
+.dib{ display: inline-block; vertical-align: middle;}
+.hide,.shide{ display:none;}
+
+.main-wrap.index{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../img/index_bg.jpg') no-repeat;
+	background-size: cover; 
+}
+
+.timer-background,.timer-main{
+	position: absolute;
+	width: 380px;
+	height: 130px;
+	left: 50%;
+	margin-left: -190px;
+	top: 130px;
+}
+
+.timer-background .mbg,.timer-main .m,.timer-main .s,.timer-background .sbg{
+	position: relative;
+	height: 130px;
+	width: 75px;
+	font-size: 90px;
+	text-align: center;
+	line-height: 130px;
+	color: #333;
+}
+
+.timer-background .mbg:before{
+	display: block;
+	content: '';
+	width: 75px;
+	height: 65px;
+	background: #f7f8f8;
+}
+
+.timer-background .mbg:after{
+	display: block;
+	content: '';
+	width: 75px;
+	height: 65px;
+	background: #dcdddd;
+	margin-top: -1px;
+}
+
+
+.timer-background .sbg:before{
+	display: block;
+	content: '';
+	width: 75px;
+	height: 65px;
+	background: #eac632;
+}
+
+.timer-background .sbg:after{
+	display: block;
+	content: '';
+	width: 75px;
+	height: 65px;
+	background: #e0bd28;
+	margin-top: -1px;
+}
+
+.timer-background .dot,.timer-main .dot{
+	position: relative;
+	height: 130px;
+	width: 46px;
+}
+
+.timer-background .dot:before{
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	margin-left: -5px;
+	top: 40px;
+	background: #f7f8f8;
+}
+
+.timer-background .dot:after{
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	left: 50%;
+	margin-left: -5px;
+	bottom: 40px;
+	background: #dddddd;
+}
+
+.holdon-bt{
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 75px;
+	border-radius: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -122px;
+	top: 400px;
+	font-size: 32px;
+	color: #FFF;
+	background: #eac632;
+	line-height: 75px;
+	text-align: center;
+}
+
+.update-bt{
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 75px;
+	border-radius: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -122px;
+	top: 520px;
+	font-size: 32px;
+	color: #FFF;
+	background: #3d9090;
+	line-height: 75px;
+	text-align: center;
+}
+
+
+.main-wrap.user .goback{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 50px;
+}
+.main-wrap.user .adv-block{
+	width: 640px;
+	height: 100px;
+}
+.main-wrap.user .head-wrap{
+	height: 350px;
+	position: relative;
+}
+.main-wrap.user .head-wrap .head{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	left: 50%;
+	margin-left: -60px;
+	top: 60px;
+	border-radius: 50%;
+	border:4px solid #eac632;
+
+}
+
+.main-wrap.user .head-wrap .name{
+	position: absolute;
+	font-size: 28px;
+	color: #5d5c5c;
+	top: 210px;
+	width: 100%;
+	text-align: center;
+}
+
+.main-wrap.user .head-wrap .level{
+	position: absolute;
+	width: 115px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	background: #eac632;
+	color: #FFF;
+	font-size: 25px;
+	border-radius: 20px;
+	top: 260px;
+	margin-left: -58px;
+	left: 50%;
+}
+
+
+.main-wrap.user .list-wrap{
+	position: relative;
+}
+
+.main-wrap.user .list-wrap ul li{
+	background: #f3f5f4;
+	width: 100%;
+	line-height: 70px;
+	font-size: 25px;
+	color: #3d3b3a;
+    overflow: hidden;
+}
+
+.main-wrap.user .list-wrap ul li .l{
+	width: 170px;
+	padding-left: 20px;
+}
+
+.main-wrap.user .list-wrap ul li:nth-child(2n){
+	background: #FFF;
+}
+
+.main-wrap.user .image-wrap{
+	position: relative;
+}
+
+.main-wrap.user .image-wrap .title{
+	font-size: 20px;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+	background: #f3f5f4;
+}
+
+.main-wrap.user .image-wrap .cover{
+	width: 100%;
+}
+
+
+.main-wrap.list{
+
+}
+
+.main-wrap.list.fanpai{
+	background: #595757;
+}
+
+.main-wrap.list .ctrl-bar{
+	height: 85px;
+	line-height: 85px;
+}
+
+.main-wrap.list .ctrl-bar .nav{
+	width: 32%;
+	text-align: center;
+	font-size: 30px;
+	color: #FFF;
+}
+
+.main-wrap.list .ctrl-bar .nav:nth-child(1){
+	background: url('../img/boy2.png') no-repeat 40px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list.fanpai .ctrl-bar .nav:nth-child(1){
+	background: url('../img/boy3.png') no-repeat 40px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list .ctrl-bar .nav.cur:nth-child(1){
+	background: url('../img/boy1.png') no-repeat 40px center;
+	background-size: auto 30px; 
+	color: #f4c600;
+}
+
+.main-wrap.list .ctrl-bar .nav:nth-child(2){
+	background: url('../img/gril2.png') no-repeat 40px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list.fanpai .ctrl-bar .nav:nth-child(2){
+	background: url('../img/gril3.png') no-repeat 40px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list .ctrl-bar .nav.cur:nth-child(2){
+	background: url('../img/gril1.png') no-repeat 40px center;
+	background-size: auto 30px; 
+	color: #f4c600;
+}
+
+.main-wrap.list .ctrl-bar .nav:nth-child(3){
+	background: url('../img/f5.png') no-repeat 20px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list.fanpai .ctrl-bar .nav:nth-child(3){
+	background: url('../img/f5_2.png') no-repeat 20px center;
+	background-size: auto 30px; 
+}
+
+.main-wrap.list .list-wrap{
+	position: relative;
+}
+
+.main-wrap.list .list-wrap li{
+	position: relative;
+	width: 50%;
+	float: left;
+	height: 410px;
+	box-sizing: border-box;
+	background: #f7f8f8;
+}
+
+.main-wrap.list .list-wrap li.taped:after{
+	position: absolute;
+	content: '';
+	background: url('../img/bingo.jpg') no-repeat;
+	width: 100%;
+	height: 340px;
+	background-size: cover; 
+}
+
+.main-wrap.list .list-wrap li .fanpau{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	background: #eac632;
+	color: #FFF;
+	font-size: 30px;
+	
+}
+
+.main-wrap.list .list-wrap li:nth-child(2n+1){
+	border-right: 1px solid #f0f4ff;
+}
+.main-wrap.list .list-wrap li:nth-child(2n){
+	border-left: 1px solid #f0f4ff;
+}
+
+.main-wrap.list .list-wrap .head{
+	width: 176px;
+	height: 176px;
+	position: absolute;
+	left: 50%;
+	margin-left: -88px;
+	top: 28px;
+	border-radius: 50%;
+}
+
+.main-wrap.list .list-wrap .info{
+	position: absolute;
+	top: 234px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.main-wrap.list .list-wrap .info .name{
+	color: #2f2c2c;
+	font-size: 25px;
+	margin-right: 5px; 
+}
+
+.main-wrap.list .list-wrap .info .level{
+	color: #e9c11d;
+	font-size: 20px;
+	margin-left: 5px;
+}
+
+
+.main-wrap.list .list-wrap .local{
+	position: absolute;
+	top: 275px;
+	left: 0;
+	width: 100%;
+	font-size: 20px;
+	color: #a2a2a2;
+	text-align: center;
+}
