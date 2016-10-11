@@ -304,3 +304,70 @@
     text-align: center;
     line-height: 100px;
 }
+
+.gold-window{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.gold-window .gw-mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(0,0,0,0.8);
+}
+
+.gold-window .gw-main{
+    position: absolute;
+    width: 690px;
+    height: 330px;
+    background: #FFF;
+    top: 200px;
+    left: 50%;
+    margin-left: -345px;
+}
+
+.gold-window .gw-main .gwm-line{
+    width: 100%;
+    height: 110px;
+    line-height: 110px;
+    font-size: 36px;
+    color: #333;
+}
+.gold-window .gw-main .gwm-line .gw-title{
+    position: relative;
+    width: 50%;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.gold-window .gw-main .gwm-line .gw-content{
+    position: relative;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.gold-window .gw-main .gwm-line .gwm-bt{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f4d34d;
+    font-size: 36px;
+    text-align: center;
+    line-height: 100px;
+    color: #FFF;
+}
+
+.gold-window .gw-main .gwm-line .gw-content .js-gplus,.gold-window .gw-main .gwm-line .gw-content .js-gsub{
+    font-size: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

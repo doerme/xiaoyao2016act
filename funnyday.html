@@ -87,12 +87,17 @@
 
 
     <!-- 金币积分弹窗 -->
-    <div class="gold-window">
+    <div class="gold-window hide">
     	<div class="gw-mark"></div>
     	<div class="gw-main">
     		<div class="gwm-line"><span class="gw-title">积分：</span><span class="gw-content">1</span></div>
-    		<div class="gwm-line"><span class="gw-title">金币：</span><span class="gw-content">3</span></div>
-    		
+    		<div class="gwm-line"><span class="gw-title">金币：</span>
+                <div class="gw-content">
+                    <span class="dib js-gsub">-</span>
+                    <span class="dib js-rs">3</span>
+                    <span class="dib js-gplus">+</span></div>
+            </div>
+    		<div class="gwm-line"><a class="gwm-bt">确定</a></div>
     	</div>
     </div>
     <!-- 金币积分弹窗end -->
@@ -137,8 +142,27 @@ $(function(){
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
-
+    /*倒计时*/
     daojishi();
+
+    /*弹窗关闭*/
+    $('body').on('tap','.gw-mark',function(){
+        $('.gold-window').addClass('hide');
+    })
+
+    /*金币加减*/
+    $('.gw-content').on('tap','.js-gplus',function(){
+        $('.js-rs').html($('.js-rs').html()*1 + 1);
+    })
+
+    $('.gw-content').on('tap','.js-gsub',function(){
+        $('.js-rs').html($('.js-rs').html()*1 - 1);
+    })
+
+    /*弹窗开启*/
+    $('.gold-window').removeClass('hide');
+
+
 })
 function adaptscreen(widthnum){
 	var DEFAULT_WIDTH = widthnum, // 页面的默认宽度

@@ -254,39 +254,66 @@ body{
 }
 
 .main-wrap.list .ctrl-bar .nav.cur:nth-child(1){
-	background: url('../img/boy1.png') no-repeat 40px center;
+	background: url('../img/boy1.png') no-repeat 60px center;
 	background-size: auto 30px; 
 	color: #f4c600;
+	text-align: left;
+	text-indent: 100px;
 }
 
 .main-wrap.list .ctrl-bar .nav:nth-child(2){
-	background: url('../img/gril2.png') no-repeat 40px center;
+	background: url('../img/gril2.png') no-repeat 60px center;
 	background-size: auto 30px; 
+	text-align: left;
+	text-indent: 100px;
 }
 
 .main-wrap.list.fanpai .ctrl-bar .nav:nth-child(2){
-	background: url('../img/gril3.png') no-repeat 40px center;
+	background: url('../img/gril3.png') no-repeat 60px center;
 	background-size: auto 30px; 
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	height: 35px;
+	line-height: 35px;
+	margin-top: 5px;
+	text-align: left;
+	text-indent: 100px;
 }
 
-.main-wrap.list .ctrl-bar .nav.cur:nth-child(2){
+.main-wrap.list .ctrl-bar .nav.cur:nth-child(3){
 	background: url('../img/gril1.png') no-repeat 40px center;
 	background-size: auto 30px; 
 	color: #f4c600;
+	text-align: left;
+	text-indent: 100px;
 }
 
 .main-wrap.list .ctrl-bar .nav:nth-child(3){
-	background: url('../img/f5.png') no-repeat 20px center;
-	background-size: auto 30px; 
+	background: url('../img/f5.png') no-repeat 40px center;
+	background-size: auto 30px;
+	text-align: left;
+	text-indent: 100px; 
 }
 
 .main-wrap.list.fanpai .ctrl-bar .nav:nth-child(3){
-	background: url('../img/f5_2.png') no-repeat 20px center;
+	background: url('../img/f5_2.png') no-repeat 60px center;
 	background-size: auto 30px; 
+	text-align: left;
+	text-indent: 100px;
 }
 
 .main-wrap.list .list-wrap{
 	position: relative;
+}
+
+
+.main-wrap.list.fanpai .list-wrap{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .main-wrap.list .list-wrap li{
@@ -296,6 +323,26 @@ body{
 	height: 410px;
 	box-sizing: border-box;
 	background: #f7f8f8;
+}
+
+.main-wrap.list.fanpai .list-wrap li{
+	position: relative;
+	width: 331px;
+	float: left;
+	height: 451px;
+	box-sizing: border-box;
+	background: #f7f8f8;
+	margin-bottom: 40px;
+}
+
+.main-wrap.list.fanpai .list-wrap li:nth-child(2n+1){
+	float: left;
+	margin-left: 26px;
+}
+
+.main-wrap.list.fanpai .list-wrap li:nth-child(2n){
+	float: right;
+	margin-right: 26px;
 }
 
 .main-wrap.list .list-wrap li.taped:after{
@@ -321,6 +368,7 @@ body{
 	
 }
 
+
 .main-wrap.list .list-wrap li:nth-child(2n+1){
 	border-right: 1px solid #f0f4ff;
 }
@@ -345,6 +393,12 @@ body{
 	width: 100%;
 	text-align: center;
 }
+.main-wrap.list.fanpai .list-wrap .info{
+	top: 250px;
+}
+.main-wrap.list.fanpai .list-wrap .info .name{
+	color: #FFF;
+}
 
 .main-wrap.list .list-wrap .info .name{
 	color: #2f2c2c;
@@ -367,4 +421,9 @@ body{
 	font-size: 20px;
 	color: #a2a2a2;
 	text-align: center;
+}
+
+.main-wrap.list.fanpai .list-wrap .local{
+	top: 290px;
+	color: #FFF;
 }
